@@ -9,25 +9,61 @@ intents:
   - bot_challenge
 
 entities:
-  - choice
+  - cartoon
+  - background
+  - face
 
 slots:
-  choice:
+  cartoon:
     type: categorical
     values:
-      - rock
-      - paper
-      - scissor
+      - anime
+      - gan anime
+      - anime GAN
+      - Cartoon AI
+      - cartoonify
+      - manga
+      - portrait
+      - drawing
+      - painting
+      - anymise
+      - animise face
+      - animate
+      - animise
+      - animated
     mappings:
       - type: from_entity
-        entity: choice
+        entity: cartoon
+  background:
+    type: categorical
+    values:
+      - delete background
+      - BG remove
+      - removal of background
+      - transparent background
+      - no wallpaper
+    mappings:
+      - type: from_entity
+        entity: background
+  face:
+    type: categorical
+    values:
+      - High resolution
+      - Improve quality
+      - convert old photo
+      - super resolution
+      - High quality
+    mappings:
+      - type: from_entity
+        entity: face
+
 
 responses:
-  utter_play:
-    - text: "Type 'rock', 'paper' or 'scissor' to play."
+  utter_choose:
+    - text: "What services do you want?"
 
-  utter_play_again:
-    - text: "Dop you want play again?"
+  utter_continue:
+    - text: "Do you want another service?"
 
   utter_goodbye:
     - text: "Bye"
@@ -36,7 +72,7 @@ responses:
     - text: "I am a bot, powered by Rasa."
 
 actions:
-  - action_play_rps
+  - action_send_request
 
 session_config:
   session_expiration_time: 60

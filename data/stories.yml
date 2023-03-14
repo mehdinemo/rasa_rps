@@ -2,22 +2,22 @@ version: "3.1"
 
 stories:
 
-  - story: play rock paper scissors
+  - story: get user requests
     steps:
       - intent: greet
-      - action: utter_play
+      - action: utter_choose
       - intent: inform
-      - action: action_play_rps
-      - action: utter_play_again
+      - action: action_send_request
+      - action: utter_continue
 
-  - story: play again
+  - story: another service
     steps:
-      - action: utter_play_again
+      - action: utter_continue
       - intent: affirm
-      - action: utter_play
+      - action: utter_choose
 
-  - story: don't play again
+  - story: end requests
     steps:
-      - action: utter_play_again
+      - action: utter_continue
       - intent: deny
       - action: utter_goodbye

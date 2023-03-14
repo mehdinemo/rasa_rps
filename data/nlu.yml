@@ -3,9 +3,30 @@ version: "3.1"
 nlu:
 - intent: inform
   examples: |
-    - [rock](choice)
-    - [paper](choice)
-    - [scissors](choice)
+    - [anime](cartoon)
+    - [gan anime](cartoon)
+    - [anime GAN](cartoon)
+    - [Cartoon AI](cartoon)
+    - [cartoonify](cartoon)
+    - [manga](cartoon)
+    - [portrait](cartoon)
+    - [drawing](cartoon)
+    - [painting](cartoon)
+    - [anymise](cartoon)
+    - [animise face](cartoon)
+    - [animate](cartoon)
+    - [animise](cartoon)
+    - [animated](cartoon)
+    - [delete background](background)
+    - [BG remove](background)
+    - [removal of background](background)
+    - [transparent background](background)
+    - [no wallpaper](background)
+    - [High resolution](face)
+    - [Improve quality](face)
+    - [convert old photo](face)
+    - [super resolution](face)
+    - [High quality](face)
 
 - intent: greet
   examples: |
